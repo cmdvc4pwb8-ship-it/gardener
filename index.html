@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gardener — Ландшафтная компания полного цикла</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-logo">
+      <svg class="logo-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="15" fill="#2d6a4f" opacity="0.12"/>
+        <path d="M16 28C16 28 8 22 8 14C8 9.58 11.58 6 16 6C20.42 6 24 9.58 24 14C24 22 16 28 16 28Z" fill="#2d6a4f"/>
+        <path d="M16 14 Q20 10 24 12" stroke="#b7e4c7" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M16 18 Q12 14 8 16" stroke="#b7e4c7" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <line x1="16" y1="14" x2="16" y2="28" stroke="#b7e4c7" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">Gardener</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#services">Услуги</a>
+      <a href="#portfolio">Портфолио</a>
+      <a href="#about">О нас</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="nav-actions">
+      <div id="user-info" class="user-info hidden">
+        <span id="user-name-display"></span>
+        <a href="admin.html" id="admin-link" class="btn-admin hidden">Панель</a>
+        <button class="btn-outline" id="logout-btn">Выйти</button>
+      </div>
+      <div id="auth-buttons" class="auth-buttons">
+        <button class="btn-outline" id="open-login">Войти</button>
+        <button class="btn-primary" id="open-register">Регистрация</button>
+      </div>
+      <button class="burger" id="burger">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none"><rect width="22" height="2" rx="1" fill="currentColor"/><rect y="7" width="16" height="2" rx="1" fill="currentColor"/><rect y="14" width="22" height="2" rx="1" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><line x1="1" y1="1" x2="17" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/><line x1="17" y1="1" x2="1" y2="17" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <a href="#services">Услуги</a>
+    <a href="#portfolio">Портфолио</a>
+    <a href="#about">О нас</a>
+    <a href="#contact">Контакты</a>
+    <div class="mobile-auth">
+      <button class="btn-outline" id="mob-login">Войти</button>
+      <button class="btn-primary" id="mob-register">Регистрация</button>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Ландшафтная компания</p>
+      <h1 class="hero-title">
+        Создаём<br />
+        <em>живые</em><br />
+        пространства
+      </h1>
+      <p class="hero-sub">Полный цикл ландшафтных работ — от концепции до сдачи объекта. Озеленение, благоустройство, проектирование.</p>
+      <div class="hero-cta">
+        <button class="btn-primary btn-lg" id="hero-consult">Получить консультацию</button>
+        <a href="#portfolio" class="btn-ghost">Посмотреть работы →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">12+</span><span class="stat-label">лет опыта</span></div>
+        <div class="stat"><span class="stat-num">340</span><span class="stat-label">объектов</span></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">довольных клиентов</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card floating">
+        <div class="card-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2d6a4f"/></svg>
+        </div>
+        <div class="card-text">
+          <strong>Новый проект</strong>
+          <span>Ботанический сад, Москва</span>
+        </div>
+      </div>
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80&auto=format&fit=crop" alt="Ландшафтный сад Gardener" class="hero-photo" loading="eager" />
+        <div class="hero-photo-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#c8a84b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <span>Проект года 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Что мы делаем</p>
+        <h2 class="section-title">Наши услуги</h2>
+        <p class="section-sub">Комплексный подход к созданию ландшафта вашей мечты</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-delay="0">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17 8C8 10 5.9 16.17 3.82 19.55L5.71 21l1-1.29C7.71 18.23 10 17 13 17c4.42 0 8-3.58 8-8V5l-4 3z" fill="currentColor"/></svg>
+          </div>
+          <h3>Озеленение</h3>
+          <p>Цветники, миксбордеры, вертикальное озеленение, посадка деревьев и кустарников. Подбор растений под ваш климат.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card" data-delay="100">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/></svg>
+          </div>
+          <h3>Благоустройство</h3>
+          <p>Дорожки и мощение, подпорные стенки, малые архитектурные формы, водоёмы и декоративные элементы.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card" data-delay="200">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="currentColor"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </div>
+          <h3>Инженерные системы</h3>
+          <p>Дренаж участка, ливневая канализация, система освещения и автоматический полив.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card" data-delay="300">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 17h2v-7H3v7zm4 0h2V7H7v10zm4 0h2v-4h-2v4zm4 0h2v-9h-2v9zm4 0h2V4h-2v13zM1 20h22v2H1z" fill="currentColor"/></svg>
+          </div>
+          <h3>Проектирование</h3>
+          <p>Концептуальный проект, 3D визуализация, дендропроект и рабочая документация.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card" data-delay="400">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 6C9.79 6 8 8.24 8 11c0 1.9.83 3.58 2.11 4.6L12 22l1.89-6.4C15.17 14.58 16 12.9 16 11c0-2.76-1.79-5-4-5z" fill="currentColor" opacity="0.7"/><circle cx="12" cy="11" r="2" fill="white"/></svg>
+          </div>
+          <h3>Автополив</h3>
+          <p>Проектирование и монтаж систем автоматического полива. Экономия воды до 40%.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+        <div class="service-card" data-delay="500">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M7 21h10v-2H7v2zm5-18L5.5 9H9v6h6V9h3.5L12 3z" fill="currentColor"/></svg>
+          </div>
+          <h3>Уход за садом</h3>
+          <p>Сезонный уход, обрезка, подкормка, защита растений. Регулярное обслуживание вашего сада.</p>
+          <a href="#contact" class="service-link">Подробнее →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Наши работы</p>
+        <h2 class="section-title">Портфолио</h2>
+        <p class="section-sub">Проекты, которыми мы гордимся</p>
+      </div>
+      <div class="portfolio-filter">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="garden">Сады</button>
+        <button class="filter-btn" data-filter="park">Парки</button>
+        <button class="filter-btn" data-filter="corporate">Корпоративные</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-cat="garden">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=75&auto=format&fit=crop" alt="Загородный сад" loading="lazy" />
+            <div class="portfolio-overlay"><h4>Загородный сад</h4><p>Подмосковье, 2024</p></div>
+          </div>
+        </div>
+        <div class="portfolio-item large" data-cat="park">
+          <div class="portfolio-img">
+            <img src="https://resize.tripster.ru/3cwGMblTG8MilSDXAUsSpx4wYfY=/fit-in/1220x600/filters:no_upscale()/https://cdn.tripster.ru/photos/a3ffc096-c25a-4f46-a98b-da161e9d23a4.jpg" alt="Городской парк" loading="lazy" />
+            <div class="portfolio-overlay"><h4>Городской парк</h4><p>Москва, 2024</p></div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="corporate">
+          <div class="portfolio-img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=75&auto=format&fit=crop" alt="Офисная территория" loading="lazy" />
+            <div class="portfolio-overlay"><h4>Офисная территория</h4><p>Бизнес-центр, 2023</p></div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="garden">
+          <div class="portfolio-img">
+            <img src="https://www.kartinki24.ru/uploads/gallery/comthumb/287/kartinki24_ru_countries_japan_0007.jpg" alt="Японский сад" loading="lazy" />
+            <div class="portfolio-overlay"><h4>Японский сад</h4><p>Рублёвка, 2023</p></div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-cat="corporate">
+          <div class="portfolio-img">
+            <img src="https://avatars.mds.yandex.net/i?id=cb1d7cb83aaa2afb22614219b4aef9e2_l-9146954-images-thumbs&n=13" alt="Ресторанный дворик" loading="lazy" />
+            <div class="portfolio-overlay"><h4>Ресторанный дворик</h4><p>Москва, 2023</p></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-wrap">
+      <div class="about-visual">
+        <div class="about-img-block">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&auto=format&fit=crop" alt="Команда Gardener" class="about-photo" loading="lazy" />
+        </div>
+      </div>
+      <div class="about-content">
+        <p class="section-tag">О компании</p>
+        <h2 class="section-title">Gardener — это команда профессионалов</h2>
+        <p class="about-text">Мы создаём живые пространства, которые радуют глаз и приносят пользу. Наша команда включает ландшафтных архитекторов, агрономов, инженеров и мастеров с многолетним опытом.</p>
+     
+        <button class="btn-primary" id="about-consult">Обсудить проект</button>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">Отзывы</p>
+        <h2 class="section-title">Что говорят клиенты</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars"><svg width="84" height="14" viewBox="0 0 84 14"><path d="M7 1l1.76 3.58L13 5.27l-3 2.92.7 4.13L7 10.25l-3.7 2.07L4 8.19 1 5.27l4.24-.69L7 1z" fill="#c8a84b"/><path d="M25 1l1.76 3.58L31 5.27l-3 2.92.7 4.13L25 10.25l-3.7 2.07L22 8.19 19 5.27l4.24-.69L25 1z" fill="#c8a84b"/><path d="M43 1l1.76 3.58L49 5.27l-3 2.92.7 4.13L43 10.25l-3.7 2.07L40 8.19 37 5.27l4.24-.69L43 1z" fill="#c8a84b"/><path d="M61 1l1.76 3.58L67 5.27l-3 2.92.7 4.13L61 10.25l-3.7 2.07L58 8.19 55 5.27l4.24-.69L61 1z" fill="#c8a84b"/><path d="M79 1l1.76 3.58L85 5.27l-3 2.92.7 4.13L79 10.25l-3.7 2.07L76 8.19 73 5.27l4.24-.69L79 1z" fill="#c8a84b"/></svg></div>
+          <p>«Команда Gardener полностью преобразила наш участок. Работали быстро, чисто, с полным погружением в задачу. Сад теперь — наше любимое место!»</p>
+          <div class="author"><div class="author-avatar">АК</div><div><strong>Анна Королёва</strong><span>Подмосковье</span></div></div>
+        </div>
+        <div class="testimonial-card featured">
+          <div class="stars"><svg width="84" height="14" viewBox="0 0 84 14"><path d="M7 1l1.76 3.58L13 5.27l-3 2.92.7 4.13L7 10.25l-3.7 2.07L4 8.19 1 5.27l4.24-.69L7 1z" fill="#c8a84b"/><path d="M25 1l1.76 3.58L31 5.27l-3 2.92.7 4.13L25 10.25l-3.7 2.07L22 8.19 19 5.27l4.24-.69L25 1z" fill="#c8a84b"/><path d="M43 1l1.76 3.58L49 5.27l-3 2.92.7 4.13L43 10.25l-3.7 2.07L40 8.19 37 5.27l4.24-.69L43 1z" fill="#c8a84b"/><path d="M61 1l1.76 3.58L67 5.27l-3 2.92.7 4.13L61 10.25l-3.7 2.07L58 8.19 55 5.27l4.24-.69L61 1z" fill="#c8a84b"/><path d="M79 1l1.76 3.58L85 5.27l-3 2.92.7 4.13L79 10.25l-3.7 2.07L76 8.19 73 5.27l4.24-.69L79 1z" fill="#c8a84b"/></svg></div>
+          <p>«Проектирование заняло 2 недели, реализация — 1,5 месяца. Результат превзошёл все ожидания. Профессионализм на высшем уровне.»</p>
+          <div class="author"><div class="author-avatar">МС</div><div><strong>Михаил Соловьёв</strong><span>Москва</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars"><svg width="84" height="14" viewBox="0 0 84 14"><path d="M7 1l1.76 3.58L13 5.27l-3 2.92.7 4.13L7 10.25l-3.7 2.07L4 8.19 1 5.27l4.24-.69L7 1z" fill="#c8a84b"/><path d="M25 1l1.76 3.58L31 5.27l-3 2.92.7 4.13L25 10.25l-3.7 2.07L22 8.19 19 5.27l4.24-.69L25 1z" fill="#c8a84b"/><path d="M43 1l1.76 3.58L49 5.27l-3 2.92.7 4.13L43 10.25l-3.7 2.07L40 8.19 37 5.27l4.24-.69L43 1z" fill="#c8a84b"/><path d="M61 1l1.76 3.58L67 5.27l-3 2.92.7 4.13L61 10.25l-3.7 2.07L58 8.19 55 5.27l4.24-.69L61 1z" fill="#c8a84b"/><path d="M79 1l1.76 3.58L85 5.27l-3 2.92.7 4.13L79 10.25l-3.7 2.07L76 8.19 73 5.27l4.24-.69L79 1z" fill="#c8a84b"/></svg></div>
+          <p>«Система автополива работает отлично уже второй сезон. Технически грамотно, надёжно. Рекомендую всем, кто ценит качество.»</p>
+          <div class="author"><div class="author-avatar">ЕП</div><div><strong>Елена Петрова</strong><span>Рублёвка</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-info">
+        <p class="section-tag">Контакты</p>
+        <h2 class="section-title">Свяжитесь с нами</h2>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="ci-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="#2d6a4f"/></svg></div>
+            <div><strong>Телефон</strong><a href="tel:+79047371797">+7 (904) 737-17-97</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#2d6a4f"/></svg></div>
+            <div><strong>Email</strong><a href="mailto:info@gardener.ru">info@gardener.ru</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="#2d6a4f"/></svg></div>
+            <div><strong>Офис</strong><span>Уфа, ул. Чернышевского, 139</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <div class="contact-form">
+          <h3>Оставьте заявку</h3>
+          <input type="text" placeholder="Ваше имя" class="form-input" id="cf-name" />
+          <input type="tel" placeholder="Телефон" class="form-input" id="cf-phone" />
+          <textarea placeholder="Расскажите о вашем проекте" class="form-input form-textarea" id="cf-msg"></textarea>
+          <button class="btn-primary btn-full" id="cf-submit">Отправить заявку</button>
+          <div id="cf-success" class="form-success hidden">Заявка отправлена! Мы свяжемся с вами.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="16" r="15" fill="#40916c" opacity="0.2"/>
+            <path d="M16 28C16 28 8 22 8 14C8 9.58 11.58 6 16 6C20.42 6 24 9.58 24 14C24 22 16 28 16 28Z" fill="#74c69d"/>
+            <path d="M16 14 Q20 10 24 12" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M16 18 Q12 14 8 16" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <line x1="16" y1="14" x2="16" y2="28" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">Gardener</span>
+        </div>
+        <p>Ландшафтная компания полного цикла. Создаём живые пространства с 2021 года.</p>
+      </div>
+      <div class="footer-links">
+        <strong>Услуги</strong>
+        <a href="#services">Озеленение</a>
+        <a href="#services">Благоустройство</a>
+        <a href="#services">Проектирование</a>
+        <a href="#services">Инженерные системы</a>
+      </div>
+      <div class="footer-links">
+        <strong>Компания</strong>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+        <a href="#" id="footer-terms">Соглашение</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Gardener. Все права защищены. <a href="#" id="footer-terms-2">Пользовательское соглашение</a></p>
+    </div>
+  </footer>
+
+  <!-- MODAL: LOGIN -->
+  <div class="modal-overlay" id="modal-login">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-login"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <div class="modal-logo"><svg width="40" height="40" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" fill="#d8f3dc"/><path d="M16 27C16 27 9 21 9 14C9 10.13 12.13 7 16 7C19.87 7 23 10.13 23 14C23 21 16 27 16 27Z" fill="#2d6a4f"/><path d="M16 14.5Q19.5 11 23 12.5" stroke="#b7e4c7" stroke-width="1.4" stroke-linecap="round" fill="none"/><line x1="16" y1="14.5" x2="16" y2="27" stroke="#b7e4c7" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <h2 class="modal-title">Добро пожаловать</h2>
+      <p class="modal-sub">Войдите в свой аккаунт</p>
+      <div class="modal-body">
+        <input type="email" class="form-input" id="login-email" placeholder="Email" />
+        <input type="password" class="form-input" id="login-password" placeholder="Пароль" />
+        <div id="login-error" class="form-error hidden"></div>
+        <button class="btn-primary btn-full" id="login-submit">Войти</button>
+        <p class="modal-switch">Нет аккаунта? <a href="#" id="switch-to-register">Зарегистрироваться</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTER -->
+  <div class="modal-overlay" id="modal-register">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-register"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <div class="modal-logo"><svg width="40" height="40" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" fill="#d8f3dc"/><path d="M16 27C16 27 9 21 9 14C9 10.13 12.13 7 16 7C19.87 7 23 10.13 23 14C23 21 16 27 16 27Z" fill="#2d6a4f"/><path d="M16 14.5Q19.5 11 23 12.5" stroke="#b7e4c7" stroke-width="1.4" stroke-linecap="round" fill="none"/><line x1="16" y1="14.5" x2="16" y2="27" stroke="#b7e4c7" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+      <h2 class="modal-title">Создать аккаунт</h2>
+      <p class="modal-sub">Присоединяйтесь к Gardener</p>
+      <div class="modal-body">
+        <input type="text" class="form-input" id="reg-name" placeholder="Ваше имя" />
+        <input type="email" class="form-input" id="reg-email" placeholder="Email" />
+        <input type="password" class="form-input" id="reg-password" placeholder="Пароль (мин. 6 символов)" />
+        <input type="password" class="form-input" id="reg-confirm" placeholder="Повторите пароль" />
+        <div class="terms-row">
+          <label class="terms-label">
+            <input type="checkbox" id="reg-terms" class="terms-checkbox" />
+            <span class="terms-custom-check"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span>Я принимаю <a href="#" class="terms-link" id="open-terms-from-reg">пользовательское соглашение</a></span>
+          </label>
+        </div>
+        <div id="reg-error" class="form-error hidden"></div>
+        <div id="reg-success" class="form-success hidden"></div>
+        <button class="btn-primary btn-full" id="reg-submit">Зарегистрироваться</button>
+        <p class="modal-switch">Уже есть аккаунт? <a href="#" id="switch-to-login">Войти</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CONSULT -->
+  <div class="modal-overlay" id="modal-consult">
+    <div class="modal">
+      <button class="modal-close" data-close="modal-consult"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <div class="modal-logo"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#d8f3dc"/><rect x="11" y="14" width="18" height="14" rx="2" fill="none" stroke="#2d6a4f" stroke-width="1.8"/><path d="M11 19h18M15 14v-2a3 3 0 016 0v2" stroke="#2d6a4f" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+      <h2 class="modal-title">Консультация</h2>
+      <p class="modal-sub">Оставьте контакты — мы перезвоним</p>
+      <div class="modal-body">
+        <input type="text" class="form-input" id="cons-name" placeholder="Ваше имя" />
+        <input type="tel" class="form-input" id="cons-phone" placeholder="Телефон" />
+        <select class="form-input" id="cons-service">
+          <option value="">Выберите услугу</option>
+          <option>Озеленение</option>
+          <option>Благоустройство</option>
+          <option>Проектирование</option>
+          <option>Инженерные системы</option>
+          <option>Другое</option>
+        </select>
+        <div id="cons-success" class="form-success hidden">Заявка принята! Скоро перезвоним.</div>
+        <button class="btn-primary btn-full" id="cons-submit">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: TERMS -->
+  <div class="modal-overlay" id="modal-terms">
+    <div class="modal modal-wide">
+      <button class="modal-close" data-close="modal-terms"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><line x1="1" y1="1" x2="11" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="11" y1="1" x2="1" y2="11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+      <h2 class="modal-title">Пользовательское соглашение</h2>
+      <p class="modal-sub">Редакция от 1 апреля 2026 г.</p>
+      <div class="terms-content">
+        <div class="terms-section"><h4>1. Общие положения</h4><p>Настоящее Пользовательское соглашение (далее — «Соглашение») регулирует отношения между компанией Gardener (далее — «Компания») и физическими лицами (далее — «Пользователь»), использующими сайт и сервисы Компании. Использование сайта означает безоговорочное принятие всех условий Соглашения.</p></div>
+        <div class="terms-section"><h4>2. Регистрация и аккаунт</h4><p>2.1. Для получения доступа к отдельным функциям сайта Пользователь обязан пройти регистрацию, создав учётную запись.</p><p>2.2. Пользователь обязуется предоставлять достоверные данные при регистрации и поддерживать их актуальность.</p><p>2.3. Пользователь несёт ответственность за сохранность логина и пароля, а также за все действия, совершённые с использованием его учётной записи.</p><p>2.4. Компания вправе отказать в регистрации или заблокировать аккаунт без объяснения причин в случае нарушения условий Соглашения.</p></div>
+        <div class="terms-section"><h4>3. Обработка персональных данных</h4><p>3.1. Компания обрабатывает персональные данные Пользователя в соответствии с Федеральным законом № 152-ФЗ «О персональных данных».</p><p>3.2. К персональным данным относятся: имя, адрес электронной почты, номер телефона, указанные при регистрации или заполнении форм на сайте.</p><p>3.3. Данные используются исключительно для: обработки заявок, оказания услуг, информирования об акциях и обновлениях сервиса.</p><p>3.4. Компания не передаёт персональные данные третьим лицам без согласия Пользователя, за исключением случаев, предусмотренных законодательством.</p><p>3.5. Пользователь вправе в любой момент отозвать согласие на обработку персональных данных, направив запрос на email: info@gardener.ru.</p></div>
+        <div class="terms-section"><h4>4. Правила использования сайта</h4><p>4.1. Пользователь обязуется не использовать сайт в противоправных целях.</p><p>4.2. Запрещается размещение недостоверной, оскорбительной или нарушающей авторские права информации.</p><p>4.3. Запрещается предпринимать действия, способные нарушить нормальную работу сайта.</p></div>
+        <div class="terms-section"><h4>5. Интеллектуальная собственность</h4><p>Все материалы сайта (тексты, изображения, логотипы, дизайн) являются собственностью Компании и охраняются законодательством об авторском праве. Любое воспроизведение без письменного разрешения запрещено.</p></div>
+        <div class="terms-section"><h4>6. Ответственность сторон</h4><p>6.1. Компания не несёт ответственности за временную недоступность сайта в связи с техническими работами.</p><p>6.2. Компания не несёт ответственности за ущерб, причинённый вследствие несанкционированного доступа третьих лиц к аккаунту Пользователя.</p></div>
+        <div class="terms-section"><h4>7. Изменение условий</h4><p>Компания вправе в одностороннем порядке изменять условия Соглашения. Актуальная версия всегда размещена на сайте. Продолжение использования сайта после изменений означает согласие с новой редакцией.</p></div>
+        <div class="terms-section"><h4>8. Контакты</h4><p>По всем вопросам, связанным с Соглашением: <strong>info@gardener.ru</strong> или по телефону <strong>+7 (919) 158-60-31</strong>.</p></div>
+      </div>
+      <div class="terms-actions">
+        <button class="btn-primary" id="accept-terms-btn">Принять соглашение</button>
+        <button class="btn-outline" data-close="modal-terms">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
